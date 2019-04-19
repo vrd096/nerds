@@ -42,12 +42,12 @@ a {
   opacity: 0.3;
 }
 
-.nav__links-list {
+.nav__list {
   display: flex;
   justify-content: center;
 }
 
-.nav__links-item {
+.nav__item {
   list-style-type: none;
   margin: 0 24px;
 }
