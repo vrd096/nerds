@@ -6,7 +6,7 @@ body {
     color: #283136;
 }
 
-a{
+a {
     text-decoration: none;
     text-transform: uppercase;
     color: #000000;
@@ -44,7 +44,7 @@ a{
 }
 .nav__links-item {
     list-style-type: none;
-    margin: 0 24px;    
+    margin: 0 24px;
 }
 .nav__link {
     font-weight: 500;
@@ -55,13 +55,10 @@ a{
 }
 .nav__link:active {
     color: #afafaf;
-   
 }
 .nav__link.is-active{
-
      border-bottom: 2px solid #fb565a;
 }
-
 .cart {
     display: flex;
 }
