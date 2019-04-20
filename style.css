@@ -36,13 +36,11 @@ a {
 .nav__logo:hover {
   opacity: 0.7;
 }
-
-.nav__logo:active {
-  opacity: 0.3;
-}
-
 .nav__logo:focus {
   opacity: 0.7;
+}
+.nav__logo:active {
+  opacity: 0.3;
 }
 
 .nav {
@@ -70,14 +68,12 @@ a {
   color: #fb565a;
 }
 
-.nav__link:active {
-  color: #afafaf;
-}
-
 .nav__link:focus {
   color: #fb565a;
 }
-
+.nav__link:active {
+  color: #afafaf;
+}
 .nav__link.is-active {
   border-bottom: 2px solid #fb565a;
 }
