@@ -27,11 +27,14 @@ a {
 }
 
 .wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1160px;
-  margin: 0 auto;
 }
 
 .logo:hover {
