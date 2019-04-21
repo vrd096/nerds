@@ -86,3 +86,18 @@ a {
 .nav__link-icon {
   margin-right: 26px;
 }
+
+.hero {
+  background-color: #eeeeee;
+}
+.hero__slider {
+  display: flex;
+}
+.hero__interest {
+  display: flex;
+  flex-direction: column;
+}
+.hero__slider-img {
+  width: 100%;
+
+}
