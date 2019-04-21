@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: Roboto, Arial, sans-serif;
   color: #283136;
+  border: 0;
 }
 
 a {
@@ -25,7 +26,7 @@ a {
 .header {
   background-color: #eeeeee;
   padding-top: 49px;
-
+  padding-bottom: 10px;
 }
 
 .wrapper {
@@ -34,16 +35,29 @@ a {
 }
 
 .button {
-  padding: 18px 40px;
+  padding: 16px 40px;
   text-decoration: uppercase;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
+  border-radius: 3px;
+  transition: all 1s;
 
 }
 .button__link {
   color: #ffffff;
 }
+
+.button__link:active {
+  color: #ffffff;
+  opacity: 0.3;
+  transition: all 0.3s;
+}
+
+.nav__logo {
+  transition: all 0.3s;
+}
+
 .nav__logo:hover {
   opacity: 0.7;
 }
@@ -73,6 +87,7 @@ a {
 .nav__link {
   font-weight: 500;
   padding: 10px 0;
+  transition: all 0.3s;
 }
 
 .nav__link:hover {
@@ -109,6 +124,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-top: 66px;
 }
 
 .hero__interest-slogan {
@@ -133,7 +149,22 @@ a {
   border: 0;
   padding-right: 54px;
   padding-left: 54px;
+  margin-top: 22px;
 }
+
+.hero__interest-button:hover {
+  background-color: #e74246;
+}
+
+.hero__interest-button:focus {
+  background-color: #e74246;
+}
+
+.hero__interest-button:active {
+  background-color: #d7373b;
+  color: #e37376;
+}
+
 
 .hero__slider-img {
   width: 100%;
