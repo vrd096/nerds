@@ -42,7 +42,6 @@ a {
   font-weight: 500;
   border-radius: 3px;
   transition: all 1s;
-
 }
 .button__link {
   color: #ffffff;
@@ -118,7 +117,7 @@ a {
 }
 .hero__slider {
   display: flex;
-  }
+}
 
 .hero__interest {
   display: flex;
@@ -132,7 +131,7 @@ a {
   line-height: 55px;
   font-weight: 500;
   color: #000000;
-  margin:0;
+  margin: 0;
 }
 
 .hero__interest-text {
@@ -145,7 +144,7 @@ a {
 }
 
 .hero__interest-button {
-  background-color: #fb565a ;
+  background-color: #fb565a;
   border: 0;
   padding-right: 54px;
   padding-left: 54px;
@@ -164,7 +163,6 @@ a {
   background-color: #d7373b;
   color: #e37376;
 }
-
 
 .hero__slider-img {
   width: 100%;
