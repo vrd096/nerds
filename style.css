@@ -38,33 +38,22 @@ a {
   padding: 16px 40px;
   text-decoration: uppercase;
   font-size: 16px;
-  line-height: 18px;
   font-weight: 500;
+  color: #ffffff;
   border-radius: 3px;
-  transition: opacity 0.3s;
+  transition: background 0.3s;
 }
 
 .button:hover {
   background-color: #e74246;
-  transition: opacity 0.3s;
 }
 
 .button:focus {
   background-color: #e74246;
-  transition: opacity 0.3s;
 }
 
 .button:active {
   background-color: #d7373b;
-  color: #e37376;
-  transition: opacity 0.3s;
-}
-
-.button__link {
-  color: #ffffff;
-}
-
-.button__link:active {
   color: #ffffff50;
 }
 
@@ -135,15 +124,12 @@ a {
 }
 
 .hero__interest {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   margin-top: 66px;
 }
 
 .hero__interest-slogan {
   font-size: 55px;
-  line-height: 55px;
+  line-height: 1;
   font-weight: 500;
   color: #000000;
   margin: 0;
@@ -156,6 +142,7 @@ a {
   font-weight: 500;
   color: #283136;
   opacity: 0.8;
+  margin-bottom: 60px;
 }
 
 .hero__interest-button {
@@ -163,7 +150,6 @@ a {
   border: 0;
   padding-right: 54px;
   padding-left: 54px;
-  margin-top: 22px;
 }
 
 .hero__slider-img {
