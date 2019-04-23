@@ -41,20 +41,35 @@ a {
   line-height: 18px;
   font-weight: 500;
   border-radius: 3px;
-  transition: all 1s;
+  transition: opacity 0.3s;
 }
+
+.button:hover {
+  background-color: #e74246;
+  transition: opacity 0.3s;
+}
+
+.button:focus {
+  background-color: #e74246;
+  transition: opacity 0.3s;
+}
+
+.button:active {
+  background-color: #d7373b;
+  color: #e37376;
+  transition: opacity 0.3s;
+}
+
 .button__link {
   color: #ffffff;
 }
 
 .button__link:active {
-  color: #ffffff;
-  opacity: 0.3;
-  transition: all 0.3s;
+  color: #ffffff50;
 }
 
 .nav__logo {
-  transition: all 0.3s;
+  transition: opacity 0.3s;
 }
 
 .nav__logo:hover {
@@ -149,19 +164,6 @@ a {
   padding-right: 54px;
   padding-left: 54px;
   margin-top: 22px;
-}
-
-.hero__interest-button:hover {
-  background-color: #e74246;
-}
-
-.hero__interest-button:focus {
-  background-color: #e74246;
-}
-
-.hero__interest-button:active {
-  background-color: #d7373b;
-  color: #e37376;
 }
 
 .hero__slider-img {
