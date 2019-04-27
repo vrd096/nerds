@@ -36,12 +36,14 @@ a {
 
 .button {
   padding: 16px 40px;
+
   text-decoration: uppercase;
   font-size: 16px;
   font-weight: 500;
   color: #ffffff;
   border-radius: 3px;
-  transition: background 0.3s;
+  background-color: #fb565a;
+  transition: background-color 0.3s;
 }
 
 .button:hover {
@@ -127,7 +129,7 @@ a {
   margin-top: 66px;
 }
 
-.hero__interest-slogan {
+.hero__slogan {
   font-size: 55px;
   line-height: 1;
   font-weight: 500;
@@ -135,18 +137,17 @@ a {
   margin: 0;
 }
 
-.hero__interest-text {
+.hero__text {
   margin-top: 29px;
+  margin-bottom: 60px;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   font-weight: 500;
   color: #283136;
   opacity: 0.8;
-  margin-bottom: 60px;
 }
 
-.hero__interest-button {
-  background-color: #fb565a;
+.hero__button {
   border: 0;
   padding-right: 54px;
   padding-left: 54px;
