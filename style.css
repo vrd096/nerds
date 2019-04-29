@@ -8,10 +8,6 @@ html {
   box-sizing: border-box;
 }
 
-.content-box-component {
-  box-sizing: content-box;
-}
-
 body {
   padding: 0;
   margin: 0;
@@ -221,34 +217,34 @@ a {
   padding: 18px 40px;
 }
 
-.futures__button-green {
+.futures__button--green {
   background-color: #00ca74;
 }
 
-.futures__button-green:hover {
+.futures__button--green:hover {
   background-color: #00bc6c;
 }
 
-.futures__button-green:focus {
+.futures__button--green:focus {
   background-color: #00bc6c;
 }
 
-.futures__button-green:active {
+.futures__button--green:active {
   background-color: #00aa62;
 }
 
-.futures__button-yellow {
+.futures__button--yellow {
   background-color: #efc84a;
 }
 
-.futures__button-yellow:hover {
+.futures__button--yellow:hover {
   background-color: #eab534;
 }
 
-.futures__button-yellow:focus {
+.futures__button--yellow:focus {
   background-color: #eab534;
 }
 
-.futures__button-yellow:active {
+.futures__button--yellow:active {
   background-color: #e5a722;
 }
