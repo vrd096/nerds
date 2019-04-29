@@ -11,10 +11,8 @@ html {
 body {
   padding: 0;
   margin: 0;
-
   font-family: Roboto, Arial, sans-serif;
   color: #283136;
-
   border: 0;
 }
 
@@ -26,14 +24,11 @@ a {
 
 .visually-hidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   padding: 0;
-
   border: 0;
-
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -41,7 +36,6 @@ a {
 .header {
   padding-top: 49px;
   padding-bottom: 10px;
-
   background-color: #eeeeee;
 }
 
@@ -53,15 +47,12 @@ a {
 .button {
   display: inline-block;
   padding: 16px 40px;
-
   text-decoration: uppercase;
   font-size: 16px;
   font-weight: 500;
   color: #ffffff;
-
   border-radius: 3px;
   background-color: #fb565a;
-
   transition: background-color 0.3s;
 }
 
@@ -105,15 +96,12 @@ a {
 
 .nav__item {
   margin: 0 24px;
-
   list-style-type: none;
 }
 
 .nav__link {
   padding: 10px 0;
-
   font-weight: 500;
-
   transition: all 0.3s;
 }
 
@@ -153,7 +141,6 @@ a {
 
 .hero__slogan {
   margin: 0;
-
   font-size: 55px;
   line-height: 1;
   font-weight: 500;
@@ -163,19 +150,16 @@ a {
 .hero__text {
   margin-top: 29px;
   margin-bottom: 60px;
-
   font-size: 16px;
   line-height: 1.5;
   font-weight: 500;
   color: #283136;
-
   opacity: 0.8;
 }
 
 .hero__button {
   padding-right: 54px;
   padding-left: 54px;
-
   border: 0;
 }
 
@@ -188,7 +172,6 @@ a {
   justify-content: flex-start;
   padding: 80px 0;
   margin: 0;
-
   list-style-type: none;
 }
 
@@ -198,7 +181,6 @@ a {
 
 .futures__title {
   margin-bottom: 20px;
-
   font-size: 24px;
   font-weight: bold;
   color: #000000;
@@ -207,7 +189,6 @@ a {
 
 .futures__text {
   margin-bottom: 35px;
-
   font-size: 16px;
   font-weight: 500;
   color: #283136;
