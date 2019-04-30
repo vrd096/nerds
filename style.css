@@ -190,7 +190,8 @@ a {
 .futures__text {
   margin-bottom: 35px;
   font-size: 16px;
-  font-weight: 500;
+  line-height: 1.5;
+  font-weight: 400;
   color: #283136;
 }
 
