@@ -318,11 +318,9 @@ ul {
 .studio__labels {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 45px;
   padding-bottom: 50px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.studio__labels--img {
-  margin: auto;
-}
