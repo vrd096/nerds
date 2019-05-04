@@ -268,7 +268,7 @@ ul {
   color: #000000;
 }
 
-.studio__about-subtitle {
+.studio__subtitle--about {
   margin-bottom: 30px;
 }
 
@@ -306,9 +306,9 @@ ul {
 .studio__history-percent {
   font-size: 28px;
   position: relative;
-  left: -15px;
-  top: -10px;
-  vertical-align: top;
+  left: -13px;
+  top: -15px;
+
 }
 
 .studio__history-text {
