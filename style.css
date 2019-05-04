@@ -303,10 +303,12 @@ ul {
   color: #000000;
 }
 
-.studio__history-sup {
+.studio__history-span {
   font-size: 28px;
   position: relative;
-  left: -12px;
+  left: -15px;
+  top: -10px;
+  vertical-align: top;
 }
 
 .studio__history-text {
@@ -323,4 +325,3 @@ ul {
   padding-bottom: 50px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-
