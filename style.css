@@ -345,7 +345,6 @@ ul {
   left: 20%;
   padding: 33px 50px 47px 50px;
   background-color: #fff;
-
 }
 
 .contacts__title {
@@ -361,4 +360,63 @@ ul {
 
 .contacts__button {
   outline: none;
+}
+
+.social__inner {
+  display: flex;
+  padding: 70px 0;
+}
+
+.social__list {
+  flex-grow: 2;
+}
+
+.social__item {
+  display: inline;
+}
+
+.social__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  width: 80px;
+  height: 80px;
+  background-color: #e1e1e1;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.social__link:hover {
+  background-color: #e74246;
+}
+
+.social__link:focus {
+  background-color: #e74246;
+  outline: none;
+}
+
+.social__link:active {
+  background-color: #d7373b;
+  color: #ffffff50;
+}
+
+.social__link:active > img {
+  opacity: 0.5;
+}
+
+.social__discount {
+  font-weight: 500;
+  color: #444;
+}
+
+.social__discount--slogan {
+  font-size: 36px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #000;
+}
+
+.social__discount {
+  flex-grow: 3;
 }
