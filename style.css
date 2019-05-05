@@ -52,7 +52,7 @@ ul {
 .button {
   display: inline-block;
   padding: 16px 40px;
-  text-decoration: uppercase;
+  text-transform: uppercase;
   font-size: 16px;
   font-weight: 500;
   color: #fff;
@@ -361,5 +361,4 @@ ul {
 
 .contacts__button {
   outline: none;
-  text-transform: uppercase;
 }
