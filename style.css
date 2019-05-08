@@ -52,10 +52,11 @@ ul {
 .button {
   display: inline-block;
   padding: 16px 40px;
-  text-decoration: uppercase;
+  text-transform: uppercase;
   font-size: 16px;
   font-weight: 500;
   color: #fff;
+  border: 0;
   border-radius: 3px;
   background-color: #fb565a;
   transition: background-color 0.3s;
@@ -165,7 +166,6 @@ ul {
 .hero__button {
   padding-right: 54px;
   padding-left: 54px;
-  border: 0;
 }
 
 .hero__slider-img {
@@ -323,4 +323,101 @@ ul {
   padding-top: 45px;
   padding-bottom: 50px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  padding: 80px 0 50px 0;
+}
+
+.contacts__adress {
+  position: relative;
+}
+
+.contacts__map {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.contacts__container {
+  position: absolute;
+  top: 13%;
+  left: 372px;
+  padding: 33px 50px 47px 50px;
+  background-color: #fff;
+}
+
+.contacts__title {
+  margin-bottom: 32px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.contacts__text {
+  color: #666666;
+}
+
+.contacts__button {
+  margin-top: 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+.social__inner {
+  display: flex;
+  padding-top: 53px;
+}
+
+.social__list {
+  flex-grow: 2;
+}
+
+.social__item {
+  display: inline;
+}
+
+.social__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  width: 80px;
+  height: 80px;
+  background-color: #e1e1e1;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.social__link:hover {
+  background-color: #e74246;
+}
+
+.social__link:focus {
+  background-color: #e74246;
+  outline: none;
+}
+
+.social__link:active {
+  background-color: #d7373b;
+  color: #ffffff50;
+}
+
+.social__link:active > img {
+  opacity: 0.5;
+}
+
+.social__discount {
+  font-weight: 500;
+  color: #444;
+}
+
+.social__discount-slogan {
+  font-size: 36px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #000;
+}
+
+.social__discount {
+  flex-grow: 3;
 }
