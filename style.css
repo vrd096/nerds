@@ -354,12 +354,13 @@ ul {
 }
 
 .contacts__text {
-  margin-bottom: 35px;
   color: #666666;
 }
 
 .contacts__button {
+  margin-top: 15px;
   outline: none;
+  cursor: pointer;
 }
 
 .social__inner {
@@ -410,7 +411,7 @@ ul {
   color: #444;
 }
 
-.social__discount--slogan {
+.social__discount-slogan {
   font-size: 36px;
   line-height: 1.5;
   font-weight: 700;
