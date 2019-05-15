@@ -272,5 +272,44 @@
         </div>
       </section>
     </footer>
+    <section class="modal">
+      <h2 class="modal__title">Напишите нам</h2>
+      <form action="POST">
+        <label for="">
+          Ваше имя:
+          <input
+            class="modal__input"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Имя Фамилия"
+            required
+          />
+        </label>
+        <label for="">
+          Ваш e-mail:
+          <input
+            class="modal__input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="email@example.com"
+            required
+          />
+        </label>
+        <label for="">
+          Текст письма:
+          <input
+            class="modal__input"
+            type="text"
+            name="text"
+            id="text"
+            placeholder="В свободной форме"
+          />
+        </label>
+        <input class="modal__button button" type="submit" value="Отправить" />
+      </form>
+      <span class="modal__close"></span>
+    </section>
   </body>
 </html>
