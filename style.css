@@ -421,3 +421,67 @@ ul {
 .social__discount {
   flex-grow: 3;
 }
+
+.modal-send {
+  position: fixed;
+  bottom: 180px;
+  left: 50%;
+  margin-left: -485px;
+  display: inline-block;
+  padding: 55px 100px;
+  background-color: #fff;
+  box-shadow:
+  0px 30px 30px 0px #444;
+}
+
+.modal-send__title {
+  font-size: 45px;
+  line-height: 0;
+  color: #000;
+  margin-bottom: 65px;
+}
+
+.modal-send__inner {
+  display: flex;
+}
+
+.modal-send__labels {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+.modal-send__labels--margin-right {
+  margin-right: 40px;
+}
+
+.modal-send__input {
+  margin-top: 10px;
+  margin-bottom: 35px;
+  padding: 15px;
+  font-size: 16px;
+  color: #444;
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+  outline: none;
+}
+
+.modal-send__input::placeholder {
+  color: #b1b1b1;
+}
+
+.modal-send__input--form-name {
+  min-width: 360px;
+}
+
+.modal-send__input--textarea {
+  display: block;
+  margin-bottom: 50px;
+  min-width: 760px;
+  height: 120px;
+  resize: none;
+  font-size: 18px;
+}
+
+
