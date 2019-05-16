@@ -441,7 +441,6 @@ ul {
   width: 100%;
   height: 100%;
   z-index: 5;
-
 }
 
 .modal-send__title {
@@ -522,7 +521,7 @@ ul {
 
 .modal-send__close::before,
 .modal-send__close::after {
-  content: ' ';
+  content: " ";
   position: absolute;
   width: 28px;
   height: 4px;
@@ -536,20 +535,19 @@ ul {
 
 .modal-send__close::after {
   transform: rotate(-45deg);
-
 }
 
 .modal-send__close:hover:before,
-.modal-send__close:hover:after{
+.modal-send__close:hover:after {
   background-color: #e74246;
 }
 
 .modal-send__close:focus:before,
-.modal-send__close:focus:after{
+.modal-send__close:focus:after {
   background-color: #e74246;
 }
 
 .modal-send__close:active:before,
-.modal-send__close:active:after{
+.modal-send__close:active:after {
   background-color: #ffeeee;
 }
