@@ -482,3 +482,34 @@ ul {
   resize: none;
   font-size: 18px;
 }
+
+.modal-send__close {
+  position: absolute;
+  top: 13%;
+  right: 10%;
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.modal-send__close::before,
+.modal-send__close::after {
+  content: ' ';
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background-color: #fecccd;
+  /* border-bottom: 3px solid #fecccd; */
+}
+
+.modal-send__close::before {
+  transform: rotate(45deg);
+}
+
+.modal-send__close::after {
+  transform: rotate(-45deg);
+
+}
