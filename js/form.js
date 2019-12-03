@@ -10,11 +10,15 @@
   function closeModal (){
     modelSend.classList.add("visually-hidden");
     modelOverlay.classList.add("visually-hidden");
+
+    document.removeEventListener("keyup", handleCardEsc);
   }
 
   function showModal() {
     modelSend.classList.remove("visually-hidden");
     modelOverlay.classList.remove("visually-hidden");
+
+    document.addEventListener("keyup", handleCardEsc);
   }
 
   function handleCardEsc({ keyCode }) {
