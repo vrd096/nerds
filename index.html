@@ -274,7 +274,12 @@
     </footer>
     <section class="modal-send visually-hidden">
       <h2 class="modal-send__title">Напишите нам</h2>
-      <form action="POST">
+      <form
+      class="modal-send__form"
+      method="post"
+      enctype="multipart/form-data"
+      autocomplete="off"
+      >
         <div class="modal-send__inner">
           <label class="modal-send__labels modal-send__labels--margin-right">
             Ваше имя:
@@ -313,6 +318,8 @@
             name="text"
             id="text"
             placeholder="В свободной форме"
+            minlength="10"
+            maxlength="100"
             autocomplete="off"
           ></textarea>
         </label>
@@ -326,6 +333,7 @@
     </section>
     <div class="modal-overlay visually-hidden"></div>
 
+    <script src="js/modal-form.js"></script>
     <script src="js/form.js"></script>
 
   </body>

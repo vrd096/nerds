@@ -1,32 +1,25 @@
 "use strict";
 
-(function() {
-  let modelSend = document.querySelector(".modal-send");
-  let modelOverlay = document.querySelector(".modal-overlay");
-  let contactButton = document.querySelector(".contacts__button");
-  let modalClose = document.querySelector(".modal-send__close");
-  const ESC_KEYCODE = 27;
+(function(){
 
-  function closeModal (){
-    modelSend.classList.add("visually-hidden");
-    modelOverlay.classList.add("visually-hidden");
 
-    document.removeEventListener("keyup", handleCardEsc);
-  }
+  let textArea = document.querySelector(".modal-send__input--textarea");
 
-  function showModal() {
-    modelSend.classList.remove("visually-hidden");
-    modelOverlay.classList.remove("visually-hidden");
-
-    document.addEventListener("keyup", handleCardEsc);
-  }
-
-  function handleCardEsc({ keyCode }) {
-    if (keyCode === ESC_KEYCODE) {
-      closeModal();
+  textArea.addEventListener("invalid", function() {
+    if (textArea.validity.tooShort) {
+      textArea.setCustomValidity(
+        "Сообщение должно быть не менее 10 символов"
+      );
+    } else {
+      textArea.setCustomValidity("");
     }
-  }
+  });
 
-  contactButton.addEventListener("click", showModal);
-  modalClose.addEventListener("click", closeModal);
-})();
+  let form = document.querySelector(".modal-send__form");
+
+  form.addEventListener("submit", function(evt) {
+
+    evt.preventDefault();
+  });
+
+}());
