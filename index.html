@@ -272,5 +272,70 @@
         </div>
       </section>
     </footer>
+    <section class="modal-send visually-hidden">
+      <h2 class="modal-send__title">Напишите нам</h2>
+      <form
+      class="modal-send__form"
+      method="post"
+      enctype="multipart/form-data"
+      autocomplete="off"
+      >
+        <div class="modal-send__inner">
+          <label class="modal-send__labels modal-send__labels--margin-right">
+            Ваше имя:
+            <br />
+            <input
+              class="modal-send__input modal-send__input--form-name"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Имя Фамилия"
+              required
+              autofocus
+              autocomplete="on"
+            />
+          </label>
+          <label class="modal-send__labels">
+            Ваш e-mail:
+            <br />
+            <input
+              class="modal-send__input modal-send__input--form-name"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="email@example.com"
+              required
+              autocomplete="on"
+            />
+          </label>
+        </div>
+        <label class="modal-send__labels">
+          Текст письма:
+          <br />
+          <textarea
+            class="modal-send__input modal-send__input--textarea"
+            type="text"
+            name="text"
+            id="text"
+            placeholder="В свободной форме"
+            minlength="10"
+            maxlength="100"
+            autocomplete="off"
+          ></textarea>
+        </label>
+        <input
+          class="modal-send__button button"
+          type="submit"
+          value="Отправить"
+        />
+      </form>
+      <button class="modal-send__close" type="button">Закрыть</button>
+    </section>
+    <div class="modal-overlay visually-hidden"></div>
+
+    <script src="js/modal-form.js"></script>
+    <script src="js/form.js"></script>
+
   </body>
+  <script></script>
 </html>
