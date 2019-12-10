@@ -552,3 +552,12 @@ ul {
 .modal-send__close:active:after {
   background-color: #ffeeee;
 }
+
+.catalog__title {
+  margin: 0;
+  padding-top: 56px;
+  padding-bottom: 110px;
+  text-align: center;
+  font-size: 55px;
+  background-color: #eeeeee;
+}
