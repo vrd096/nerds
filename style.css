@@ -1,6 +1,4 @@
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: inherit;
 }
 
@@ -82,9 +80,11 @@ ul {
 .nav__logo:hover {
   opacity: 0.7;
 }
+
 .nav__logo:focus {
   opacity: 0.7;
 }
+
 .nav__logo:active {
   opacity: 0.3;
 }
@@ -118,9 +118,11 @@ ul {
 .nav__link:focus {
   color: #fb565a;
 }
+
 .nav__link:active {
   color: #afafaf;
 }
+
 .nav__link.is-active {
   border-bottom: 2px solid #fb565a;
 }
@@ -137,6 +139,7 @@ ul {
 .hero {
   background-color: #eeeeee;
 }
+
 .hero__slider {
   display: flex;
 }
@@ -402,7 +405,7 @@ ul {
   color: #ffffff50;
 }
 
-.social__link:active > img {
+.social__link:active>img {
   opacity: 0.5;
 }
 
@@ -435,7 +438,6 @@ ul {
 }
 
 .modal-overlay {
-
   position: fixed;
   top: 0;
   left: 0;
@@ -520,8 +522,7 @@ ul {
   outline: none;
 }
 
-.modal-send__close::before,
-.modal-send__close::after {
+.modal-send__close::before, .modal-send__close::after {
   content: " ";
   position: absolute;
   width: 28px;
@@ -538,20 +539,18 @@ ul {
   transform: rotate(-45deg);
 }
 
-.modal-send__close:hover:before,
-.modal-send__close:hover:after {
+.modal-send__close:hover:before, .modal-send__close:hover:after {
   background-color: #e74246;
 }
 
-.modal-send__close:focus:before,
-.modal-send__close:focus:after {
+.modal-send__close:focus:before, .modal-send__close:focus:after {
   background-color: #e74246;
 }
 
-.modal-send__close:active:before,
-.modal-send__close:active:after {
+.modal-send__close:active:before, .modal-send__close:active:after {
   background-color: #ffeeee;
 }
+
 .catalog-title {
   margin: 0;
   padding-top: 56px;
@@ -566,8 +565,6 @@ ul {
   padding: 40px 0;
 }
 
-
-
 .catalog__subtitle {
   font-size: 18px;
   text-transform: uppercase;
@@ -578,7 +575,7 @@ ul {
   min-width: 260px;
   padding: 40px 20px;
   margin-top: 55px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
   border-radius: 3px;
@@ -597,10 +594,8 @@ ul {
   box-shadow: 0 2px #cccdcd;
 }
 
-
-
 .catalog__range-item--right {
-  right: -80%;
+  right: -82%;
 }
 
 .catalog__range-item::before {
@@ -611,16 +606,55 @@ ul {
   border-radius: 50%;
   background-color: #ababab;
 }
+
+.catalog__range-price-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog__range-label {
+  text-transform: uppercase;
+}
+
 .catalog__range-price {
-  width: 10px;
-  border: none;
-  padding: 10px;
+  padding: 10px 15px;
+  margin-left: 10px;
+  width: 80px;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
   background-color: #eee;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+.catalog__grid {
+  margin-top: 60px;
+}
+
+.catalog__grid-label {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.catalog__grid-icon {
+  margin-right: 10px;
+}
+
+.catalog__grid-svg {
+  vertical-align: middle;
+  margin-right: 10px;
+  fill: #a6a6a6;
+}
+
+.catalog__grid-svg:hover {
+  fill: red;
 }
 
 .catalog__site {
   margin-left: 140px;
-
 }
 
 .catalog__sort {
@@ -629,14 +663,14 @@ ul {
   padding-bottom: 40px;
 }
 
+.catalog__sort-inner {
+  display: flex;
+}
+
 .catalog__sort-list {
   display: flex;
   justify-content: space-between;
-}
-
-.catalog__sort-inner {
-  display: flex;
-
+  margin-right: 25px;
 }
 
 .catalog__sort-item {
@@ -650,6 +684,11 @@ ul {
 
 .catalog__sort-link {
   font-size: 14px;
+  opacity: 0.5;
+}
+
+.catalog__sort-link--current {
+  opacity: 1;
 }
 
 .catalog__sort-link--arrow {
@@ -659,6 +698,7 @@ ul {
 
 .catalog__sort-arrow-up {
   position: relative;
+  top: 6px;
   border: 10px solid #010101;
   border-bottom-width: 0px;
   border-right-width: 6px;
@@ -669,7 +709,8 @@ ul {
 
 .catalog__sort-arrow-down {
   position: relative;
-  margin-left: 15px;
+  top: -4px;
+  margin-left: 20px;
   border: 10px solid #a6a6a6;
   border-top-width: 0px;
   border-right-width: 6px;
@@ -696,12 +737,10 @@ ul {
   background-color: #e9e9e9;
   display: flex;
   align-items: center;
-  border-radius: 4px 4px 0 0 ;
-
+  border-radius: 4px 4px 0 0;
 }
-.catalog__template-header-circle,
-.catalog__template-header-circle::before,
-.catalog__template-header-circle::after {
+
+.catalog__template-header-circle, .catalog__template-header-circle::before, .catalog__template-header-circle::after {
   background-color: #fff;
   border-radius: 50%;
   width: 15px;

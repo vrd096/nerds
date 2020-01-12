@@ -1,178 +1,271 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css" />
-  <title>Каталог</title>
-</head>
-<body>
-  <header class="header">
-    <div class="wrapper">
-      <nav class="nav">
-        <a href="/" class="nav__logo">
-          <img src="img/logo.svg" alt="логотип Nerds" />
-        </a>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="/about" class="nav__link is-active">Студия</a>
-          </li>
-          <li class="nav__item">
-            <a href="/clients" class="nav__link">Клиенты</a>
-          </li>
-          <li class="nav__item">
-            <a href="/shop" class="nav__link">Магазин</a>
-          </li>
-          <li class="nav__item">
-            <a href="/contacts" class="nav__link">Контакты</a>
-          </li>
-        </ul>
-        <a href="/cart" class="nav__link nav__link-cart">
-          <img
-            src="img/cart.svg"
-            alt="Корзина товаров"
-            class="nav__link-icon"
-          />
-          Корзина
-        </a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <h1 class="catalog-title">
-      Магазин готовых шаблонов
-    </h1>
-
-    <section class="catalog">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Каталог</title>
+  </head>
+  <body>
+    <header class="header">
       <div class="wrapper">
-        <div class="catalog__inner">
-          <div class="catalog__filter">
-            <h2 class="catalog__subtitle">
-              Стоимость:
-            </h2>
-            <div class="catalog__range">
-              <div class="catalog__range-item catalog__range-item--left"></div>
-              <div class="catalog__range-item catalog__range-item--right"></div>
-            </div>
-            <label class="catalog__range-label">
-               От
-               <input class="catalog__range-price" type="text" value="0">
-              </label>
-            <label class="catalog__range-label">
-               До
-              <input class="catalog__range-price" type="text">
-              </label>
-            <h2 class="catalog__subtitle">
-              Сетка:
-            </h2>
-            <ul class="catalog__list">
-              <li class="catalog__item">
-                Адаптивная
-              </li>
-              <li class="catalog__item">
-                Фиксированная
-              </li>
-              <li class="catalog__item">
-                Резиновая
-              </li>
-            </ul>
+        <nav class="nav">
+          <a href="/" class="nav__logo">
+            <img src="img/logo.svg" alt="логотип Nerds" />
+          </a>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="/about" class="nav__link is-active">Студия</a>
+            </li>
+            <li class="nav__item">
+              <a href="/clients" class="nav__link">Клиенты</a>
+            </li>
+            <li class="nav__item">
+              <a href="/shop" class="nav__link">Магазин</a>
+            </li>
+            <li class="nav__item">
+              <a href="/contacts" class="nav__link">Контакты</a>
+            </li>
+          </ul>
+          <a href="/cart" class="nav__link nav__link-cart">
+            <img
+              src="img/cart.svg"
+              alt="Корзина товаров"
+              class="nav__link-icon"
+            />
+            Корзина
+          </a>
+        </nav>
+      </div>
+    </header>
 
-            <h2 class="catalog__subtitle">
-              Особенности:
-            </h2>
-            <ul class="catalog__list">
-              <li class="catalog__item">Слайдер</li>
-              <li class="catalog__item">Блок преимуществ</li>
-              <li class="catalog__item">Новости</li>
-              <li class="catalog__item">Галерея</li>
-              <li class="catalog__item">Корзина</li>
-            </ul>
-            <button class="catalog__button" type="button">Показать</button>
-          </div>
-          <div class="catalog__site">
-            <div class="catalog__sort">
+    <main>
+      <h1 class="catalog-title">
+        Магазин готовых шаблонов
+      </h1>
+
+      <section class="catalog">
+        <div class="wrapper">
+          <div class="catalog__inner">
+            <div class="catalog__filter">
               <h2 class="catalog__subtitle">
-                Сортировать:
+                Стоимость:
               </h2>
-              <div class="catalog__sort-inner">
-                <ul class="catalog__sort-list">
-                <li class="catalog__sort-item">
-                  <a class="catalog__sort-link" href="#">По цене</a>
+              <div class="catalog__range">
+                <div
+                  class="catalog__range-item catalog__range-item--left"
+                ></div>
+                <div
+                  class="catalog__range-item catalog__range-item--right"
+                ></div>
+              </div>
+              <div class="catalog__range-price-inner">
+                <label class="catalog__range-label">
+                  От
+                  <input class="catalog__range-price" type="text" value="0" />
+                </label>
+                <label class="catalog__range-label catalog__range-label">
+                  До
+                  <input
+                    class="catalog__range-price"
+                    type="text"
+                    value="15 000"
+                  />
+                </label>
+              </div>
+              <div class="catalog__grid">
+                <h2 class="catalog__subtitle">
+                  Сетка:
+                </h2>
+                <form action="">
+                  <label class="catalog__grid-label">
+                    <input
+                      class="catalog__grid-radio"
+                      type="radio"
+                      name="grid"
+                      checked
+                    />
+                    <span class="catalog__grid-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="25"
+                        viewBox="0 0 25 25"
+                      >
+                        <path
+                          class="catalog__grid-svg"
+                          fill="#4D4D4D"
+                          d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"
+                        />
+                      </svg>
+                    </span>
+                    Адаптивная
+                  </label>
+
+                  <label class="catalog__grid-label">
+                    <input
+                      class="catalog__grid-radio"
+                      type="radio"
+                      name="grid"
+                    />
+                    <span class="catalog__grid-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="25"
+                        viewBox="0 0 25 25"
+                      >
+                        <path
+                          class="catalog__grid-svg"
+                          fill="#4D4D4D"
+                          d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"
+                        />
+                      </svg>
+                    </span>
+                    Фиксированная
+                  </label>
+
+                  <label class="catalog__grid-label">
+                    <input
+                      class="catalog__grid-radio"
+                      type="radio"
+                      name="grid"
+                    />
+                    <span class="catalog__grid-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="25"
+                        viewBox="0 0 25 25"
+                      >
+                        <path
+                          class="catalog__grid-svg"
+                          fill="#4D4D4D"
+                          d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"
+                        />
+                      </svg>
+                    </span>
+                    Резиновая
+                  </label>
+                </form>
+              </div>
+              <h2 class="catalog__subtitle">
+                Особенности:
+              </h2>
+              <ul class="catalog__list">
+                <li class="catalog__item">Слайдер</li>
+                <li class="catalog__item">Блок преимуществ</li>
+                <li class="catalog__item">Новости</li>
+                <li class="catalog__item">Галерея</li>
+                <li class="catalog__item">Корзина</li>
+              </ul>
+              <button class="catalog__button" type="button">Показать</button>
+            </div>
+            <div class="catalog__site">
+              <div class="catalog__sort">
+                <h2 class="catalog__subtitle">
+                  Сортировать:
+                </h2>
+                <div class="catalog__sort-inner">
+                  <ul class="catalog__sort-list">
+                    <li class="catalog__sort-item">
+                      <a
+                        class="catalog__sort-link catalog__sort-link--current"
+                        href="#"
+                        >По цене</a
+                      >
+                    </li>
+                    <li class="catalog__sort-item">
+                      <a class="catalog__sort-link" href="#">По типу</a>
+                    </li>
+                    <li class="catalog__sort-item">
+                      <a class="catalog__sort-link" href="#">По названию</a>
+                    </li>
+                  </ul>
+                  <div class="catalog__sort-arrows">
+                    <a class=" catalog__sort-link--arrow" href="#">
+                      Стрелка вверх
+                      <span class="catalog__sort-arrow-up"></span>
+                    </a>
+                    <a class=" catalog__sort-link--arrow" href="#">
+                      Стрелка вниз
+                      <span class="catalog__sort-arrow-down"></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <ul class="catalog__templates-list">
+                <li class="catalog__templates-item">
+                  <div class="catalog__template-header">
+                    <span class="catalog__template-header-circle"></span>
+                  </div>
+                  <img
+                    src="img/sedona.jpg"
+                    alt=""
+                    class="catalog__template-image"
+                  />
+                  <div class="catalog__template-price"></div>
                 </li>
-                <li class="catalog__sort-item">
-                  <a class="catalog__sort-link" href="#">По типу</a>
+                <li class="catalog__templates-item">
+                  <div class="catalog__template-header">
+                    <span class="catalog__template-header-circle"></span>
+                  </div>
+                  <img
+                    src="img/pink.jpg"
+                    alt=""
+                    class="catalog__template-image"
+                  />
+                  <div class="catalog__template-price"></div>
                 </li>
-                <li class="catalog__sort-item">
-                  <a class="catalog__sort-link" href="#">По названию</a>
+                <li class="catalog__templates-item">
+                  <div class="catalog__template-header">
+                    <span class="catalog__template-header-circle"></span>
+                  </div>
+                  <img
+                    src="img/barbershop.jpg"
+                    alt=""
+                    class="catalog__template-image"
+                  />
+                  <div class="catalog__template-price"></div>
+                </li>
+                <li class="catalog__templates-item">
+                  <div class="catalog__template-header">
+                    <span class="catalog__template-header-circle"></span>
+                  </div>
+                  <img
+                    src="img/mishka.jpg"
+                    alt=""
+                    class="catalog__template-image"
+                  />
+                  <div class="catalog__template-price"></div>
+                </li>
+                <li class="catalog__templates-item">
+                  <div class="catalog__template-header">
+                    <span class="catalog__template-header-circle"></span>
+                  </div>
+                  <img
+                    src="img/aplus.jpg"
+                    alt=""
+                    class="catalog__template-image"
+                  />
+                  <div class="catalog__template-price"></div>
+                </li>
+                <li class="catalog__templates-item">
+                  <div class="catalog__template-header">
+                    <span class="catalog__template-header-circle"></span>
+                  </div>
+                  <img
+                    src="img/kvast.jpg"
+                    alt=""
+                    class="catalog__template-image"
+                  />
+                  <div class="catalog__template-price"></div>
                 </li>
               </ul>
-              <div class="catalog__sort-arrows">
-                <a
-                    class=" catalog__sort-link--arrow"
-                    href="#">
-                    Стрелка вверх
-                    <span class="catalog__sort-arrow-up"></span>
-                </a>
-                <a
-                    class=" catalog__sort-link--arrow"
-                    href="#">
-                    Стрелка вниз
-                    <span class="catalog__sort-arrow-down"></span>
-                </a>
-              </div>
-
-              </div>
-
             </div>
-            <ul class="catalog__templates-list">
-              <li class="catalog__templates-item">
-                <div class="catalog__template-header">
-                  <span class="catalog__template-header-circle"></span>
-                </div>
-                <img src="img/sedona.jpg" alt="" class="catalog__template-image">
-                <div class="catalog__template-price"></div>
-              </li>
-              <li class="catalog__templates-item">
-                <div class="catalog__template-header">
-                  <span class="catalog__template-header-circle"></span>
-                </div>
-                <img src="img/pink.jpg" alt="" class="catalog__template-image">
-                <div class="catalog__template-price"></div>
-              </li>
-              <li class="catalog__templates-item">
-                <div class="catalog__template-header">
-                  <span class="catalog__template-header-circle"></span>
-                </div>
-                <img src="img/barbershop.jpg" alt="" class="catalog__template-image">
-                <div class="catalog__template-price"></div>
-              </li>
-              <li class="catalog__templates-item">
-                <div class="catalog__template-header">
-                  <span class="catalog__template-header-circle"></span>
-                </div>
-                <img src="img/mishka.jpg" alt="" class="catalog__template-image">
-                <div class="catalog__template-price"></div>
-              </li>
-              <li class="catalog__templates-item">
-                <div class="catalog__template-header">
-                  <span class="catalog__template-header-circle"></span>
-                </div>
-                <img src="img/aplus.jpg" alt="" class="catalog__template-image">
-                <div class="catalog__template-price"></div>
-              </li>
-              <li class="catalog__templates-item">
-                <div class="catalog__template-header">
-                  <span class="catalog__template-header-circle"></span>
-                </div>
-                <img src="img/kvast.jpg" alt="" class="catalog__template-image">
-                <div class="catalog__template-price"></div>
-              </li>
-            </ul>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-</body>
+      </section>
+    </main>
+  </body>
 </html>
