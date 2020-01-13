@@ -54,6 +54,7 @@ ul {
   font-size: 16px;
   font-weight: 500;
   color: #fff;
+  outline: none;
   border: 0;
   border-radius: 3px;
   background-color: #fb565a;
@@ -629,28 +630,69 @@ ul {
   outline: none;
 }
 
-.catalog__grid {
+.catalog__filter-grid {
   margin-top: 60px;
 }
 
-.catalog__grid-label {
-  padding: 10px 0;
+.catalog__filter-grid-label {
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
 }
 
-.catalog__grid-icon {
+.catalog__filter-grid-icon {
   margin-right: 10px;
+  background-image: url("img/radio-off.svg");
+  width: 25px;
+  height: 25px;
+  opacity: 0.5;
 }
 
-.catalog__grid-svg {
-  vertical-align: middle;
-  margin-right: 10px;
-  fill: #a6a6a6;
+.catalog__filter-grid-radio:checked~.catalog__filter-grid-icon {
+  background-image: url("img/radio-on.svg");
 }
 
-.catalog__grid-svg:hover {
-  fill: red;
+.catalog__filter-features {
+  margin-top: 40px;
+}
+
+.catalog__filter-features-item {
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.catalog__filter-features-icon {
+  margin-right: 10px;
+  background-image: url("img/checkbox-off.svg");
+  width: 23px;
+  height: 23px;
+  opacity: 0.5;
+}
+.catalog__filter-features-checkbox:checked~.catalog__filter-features-icon {
+  background-image: url("img/checkbox-on.svg");
+  width: 27px;
+  height: 23px;
+}
+
+.catalog__filter-features-button {
+  margin-top: 35px;
+  width: 100%;
+  background-color: #eee;
+  color: #000;
+  font-weight: 600;
+}
+
+.catalog__filter-features-button:hover,
+.catalog__filter-features-button:focus {
+  background-color: #dfdfdf;
+}
+
+.catalog__filter-features-button:active {
+  background-color: #d5d5d5;
+  color: #000;
+  opacity: 0.5;
+  border-top: 3px solid #bfbfbf;
 }
 
 .catalog__site {
@@ -738,6 +780,11 @@ ul {
   display: flex;
   align-items: center;
   border-radius: 4px 4px 0 0;
+}
+
+.catalog__templates-item:hover>.catalog__template-header {
+  background-color: #4d4d4d;
+  transition: background-color 0.3s;
 }
 
 .catalog__template-header-circle, .catalog__template-header-circle::before, .catalog__template-header-circle::after {

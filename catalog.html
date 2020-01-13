@@ -73,93 +73,102 @@
                   />
                 </label>
               </div>
-              <div class="catalog__grid">
+              <div class="catalog__filter-grid">
                 <h2 class="catalog__subtitle">
                   Сетка:
                 </h2>
-                <form action="">
-                  <label class="catalog__grid-label">
+                <form action="post">
+                  <label class="catalog__filter-grid-label">
                     <input
-                      class="catalog__grid-radio"
+                      class="catalog__filter-grid-radio visually-hidden"
                       type="radio"
-                      name="grid"
+                      name="filter-grid"
                       checked
                     />
-                    <span class="catalog__grid-icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="25"
-                        height="25"
-                        viewBox="0 0 25 25"
-                      >
-                        <path
-                          class="catalog__grid-svg"
-                          fill="#4D4D4D"
-                          d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"
-                        />
-                      </svg>
-                    </span>
+                    <span class="catalog__filter-grid-icon"></span>
                     Адаптивная
                   </label>
-
-                  <label class="catalog__grid-label">
+                  <label class="catalog__filter-grid-label">
                     <input
-                      class="catalog__grid-radio"
+                      class="catalog__filter-grid-radio visually-hidden"
                       type="radio"
-                      name="grid"
+                      name="filter-grid"
                     />
-                    <span class="catalog__grid-icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="25"
-                        height="25"
-                        viewBox="0 0 25 25"
-                      >
-                        <path
-                          class="catalog__grid-svg"
-                          fill="#4D4D4D"
-                          d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"
-                        />
-                      </svg>
-                    </span>
+                    <span class="catalog__filter-grid-icon"></span>
                     Фиксированная
                   </label>
-
-                  <label class="catalog__grid-label">
+                  <label class="catalog__filter-grid-label">
                     <input
-                      class="catalog__grid-radio"
+                      class="catalog__filter-grid-radio visually-hidden"
                       type="radio"
-                      name="grid"
+                      name="filter-grid"
                     />
-                    <span class="catalog__grid-icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="25"
-                        height="25"
-                        viewBox="0 0 25 25"
-                      >
-                        <path
-                          class="catalog__grid-svg"
-                          fill="#4D4D4D"
-                          d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"
-                        />
-                      </svg>
-                    </span>
+                    <span class="catalog__filter-grid-icon"></span>
                     Резиновая
                   </label>
                 </form>
               </div>
-              <h2 class="catalog__subtitle">
-                Особенности:
-              </h2>
-              <ul class="catalog__list">
-                <li class="catalog__item">Слайдер</li>
-                <li class="catalog__item">Блок преимуществ</li>
-                <li class="catalog__item">Новости</li>
-                <li class="catalog__item">Галерея</li>
-                <li class="catalog__item">Корзина</li>
-              </ul>
-              <button class="catalog__button" type="button">Показать</button>
+              <div class="catalog__filter-features">
+                <h2 class="catalog__subtitle">
+                  Особенности:
+                </h2>
+                <form class="catalog__filter-features-list" action="post">
+                  <label for="checkbox-slider" class="catalog__filter-features-item">
+                    <input
+                    class="catalog__filter-features-checkbox visually-hidden"
+                    type="checkbox"
+                    name="features-checkbox"
+                    id="checkbox-slider"
+                    >
+                    <span class="catalog__filter-features-icon"></span class="catalog__filter-features-icon">
+                    Слайдер
+                  </label>
+                  <label for="checkbox-block-features" class="catalog__filter-features-item">
+                    <input
+                    class="catalog__filter-features-checkbox visually-hidden"
+                    type="checkbox"
+                    name="features-checkbox"
+                    id="checkbox-block-features"
+                    >
+                    <span class="catalog__filter-features-icon"></span>
+                    Блок преимуществ
+                    </label
+                  >
+                  <label for="checkbox-news" class="catalog__filter-features-item">
+                    <input
+                    class="catalog__filter-features-checkbox visually-hidden"
+                    type="checkbox"
+                    name="features-checkbox"
+                    id="checkbox-news"
+                    >
+                    <span class="catalog__filter-features-icon"></span>
+                    Новости
+                  </label>
+                  <label for="checkbox-gallery" class="catalog__filter-features-item">
+                    <input
+                    class="catalog__filter-features-checkbox visually-hidden"
+                    type="checkbox"
+                    name="features-checkbox"
+                    id="checkbox-gallery"
+                    >
+                    <span class="catalog__filter-features-icon"></span>
+                    Галерея
+                  </label>
+                  <label for="checkbox-trash" class="catalog__filter-features-item">
+                    <input
+                    class="catalog__filter-features-checkbox visually-hidden"
+                    type="checkbox"
+                    name="features-checkbox"
+                    id="checkbox-trash"
+                    >
+                    <span class="catalog__filter-features-icon"></span>
+                    Корзина
+                  </label>
+                  <button class="catalog__filter-features-button button" type="submit">
+                    Показать
+                  </button>
+                </form>
+              </div>
             </div>
             <div class="catalog__site">
               <div class="catalog__sort">
