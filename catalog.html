@@ -83,10 +83,9 @@
                       class="catalog__filter-grid-radio visually-hidden"
                       type="radio"
                       name="filter-grid"
-                      checked
                     />
                     <span class="catalog__filter-grid-icon"></span>
-                    Адаптивная
+                    <p class="catalog__filter-grid-text">Адаптивная</p>
                   </label>
                   <label class="catalog__filter-grid-label">
                     <input
@@ -95,7 +94,7 @@
                       name="filter-grid"
                     />
                     <span class="catalog__filter-grid-icon"></span>
-                    Фиксированная
+                    <p class="catalog__filter-grid-text">Фиксированная</p>
                   </label>
                   <label class="catalog__filter-grid-label">
                     <input
@@ -104,7 +103,7 @@
                       name="filter-grid"
                     />
                     <span class="catalog__filter-grid-icon"></span>
-                    Резиновая
+                    <p class="catalog__filter-grid-text">Резиновая</p>
                   </label>
                 </form>
               </div>
@@ -113,7 +112,7 @@
                   Особенности:
                 </h2>
                 <form class="catalog__filter-features-list" action="post">
-                  <label for="checkbox-slider" class="catalog__filter-features-item">
+                  <label for="checkbox-slider" class="catalog__filter-features-label">
                     <input
                     class="catalog__filter-features-checkbox visually-hidden"
                     type="checkbox"
@@ -121,9 +120,10 @@
                     id="checkbox-slider"
                     >
                     <span class="catalog__filter-features-icon"></span class="catalog__filter-features-icon">
-                    Слайдер
+                    <p class="catalog__filter-features-text">Слайдер</p>
+
                   </label>
-                  <label for="checkbox-block-features" class="catalog__filter-features-item">
+                  <label for="checkbox-block-features" class="catalog__filter-features-label">
                     <input
                     class="catalog__filter-features-checkbox visually-hidden"
                     type="checkbox"
@@ -131,10 +131,10 @@
                     id="checkbox-block-features"
                     >
                     <span class="catalog__filter-features-icon"></span>
-                    Блок преимуществ
+                    <p class="catalog__filter-features-text">Блок преимуществ</p>
                     </label
                   >
-                  <label for="checkbox-news" class="catalog__filter-features-item">
+                  <label for="checkbox-news" class="catalog__filter-features-label">
                     <input
                     class="catalog__filter-features-checkbox visually-hidden"
                     type="checkbox"
@@ -142,9 +142,10 @@
                     id="checkbox-news"
                     >
                     <span class="catalog__filter-features-icon"></span>
-                    Новости
+                    <p class="catalog__filter-features-text">Новости</p>
+
                   </label>
-                  <label for="checkbox-gallery" class="catalog__filter-features-item">
+                  <label for="checkbox-gallery" class="catalog__filter-features-label">
                     <input
                     class="catalog__filter-features-checkbox visually-hidden"
                     type="checkbox"
@@ -152,9 +153,10 @@
                     id="checkbox-gallery"
                     >
                     <span class="catalog__filter-features-icon"></span>
-                    Галерея
+                    <p class="catalog__filter-features-text">Галерея</p>
+
                   </label>
-                  <label for="checkbox-trash" class="catalog__filter-features-item">
+                  <label for="checkbox-trash" class="catalog__filter-features-label">
                     <input
                     class="catalog__filter-features-checkbox visually-hidden"
                     type="checkbox"
@@ -162,7 +164,8 @@
                     id="checkbox-trash"
                     >
                     <span class="catalog__filter-features-icon"></span>
-                    Корзина
+                    <p class="catalog__filter-features-text">Корзина</p>
+
                   </label>
                   <button class="catalog__filter-features-button button" type="submit">
                     Показать
@@ -213,7 +216,11 @@
                     alt=""
                     class="catalog__template-image"
                   />
-                  <div class="catalog__template-price"></div>
+                  <div class="catalog__template-price">
+                    <p class="catalog__template-price-title">Sedona</p>
+                    <p class="catalog__template-price-description">Информационный сайт для туристов</p>
+                    <button class="catalog__template-price-button button" type="button">9 900 Руб.</button>
+                  </div>
                 </li>
                 <li class="catalog__templates-item">
                   <div class="catalog__template-header">
@@ -224,7 +231,11 @@
                     alt=""
                     class="catalog__template-image"
                   />
-                  <div class="catalog__template-price"></div>
+                  <div class="catalog__template-price">
+                    <p class="catalog__template-price-title">Pink App</p>
+                    <p class="catalog__template-price-description">Продуктовый лендинг приложения для iOS и Android</p>
+                    <button class="catalog__template-price-button button" type="button">9 900 Руб.</button>
+                  </div>
                 </li>
                 <li class="catalog__templates-item">
                   <div class="catalog__template-header">
@@ -235,7 +246,11 @@
                     alt=""
                     class="catalog__template-image"
                   />
-                  <div class="catalog__template-price"></div>
+                  <div class="catalog__template-price">
+                    <p class="catalog__template-price-title">Barbershop</p>
+                    <p class="catalog__template-price-description">Сайт салоны красоты. Для мужчин, да.</p>
+                    <button class="catalog__template-price-button button" type="button">9 900 Руб.</button>
+                  </div>
                 </li>
                 <li class="catalog__templates-item">
                   <div class="catalog__template-header">
@@ -246,7 +261,11 @@
                     alt=""
                     class="catalog__template-image"
                   />
-                  <div class="catalog__template-price"></div>
+                  <div class="catalog__template-price">
+                    <p class="catalog__template-price-title">MISHKA</p>
+                    <p class="catalog__template-price-description">Интернет-магазин вязаных игрушек</p>
+                    <button class="catalog__template-price-button button" type="button">9 900 Руб.</button>
+                  </div>
                 </li>
                 <li class="catalog__templates-item">
                   <div class="catalog__template-header">
@@ -257,7 +276,11 @@
                     alt=""
                     class="catalog__template-image"
                   />
-                  <div class="catalog__template-price"></div>
+                  <div class="catalog__template-price">
+                    <p class="catalog__template-price-title">A Plus</p>
+                    <p class="catalog__template-price-description">Лендинг курсов повышения квалификации</p>
+                    <button class="catalog__template-price-button button" type="button">9 900 Руб.</button>
+                  </div>
                 </li>
                 <li class="catalog__templates-item">
                   <div class="catalog__template-header">
@@ -268,7 +291,11 @@
                     alt=""
                     class="catalog__template-image"
                   />
-                  <div class="catalog__template-price"></div>
+                  <div class="catalog__template-price">
+                    <p class="catalog__template-price-title">КВАСТ</p>
+                    <p class="catalog__template-price-description">Промо-сайт производителя крафтового кваса</p>
+                    <button class="catalog__template-price-button button" type="button">9 900 Руб.</button>
+                  </div>
                 </li>
               </ul>
             </div>
