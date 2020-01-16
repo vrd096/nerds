@@ -10,7 +10,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: Roboto, Arial, sans-serif;
-  font-weight: 500;
+  /* font-weight: 500; */
   color: #283136;
   border: 0;
 }
@@ -615,6 +615,7 @@ ul {
 }
 
 .catalog__range-label {
+  font-weight: 500;
   text-transform: uppercase;
 }
 
