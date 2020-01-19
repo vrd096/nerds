@@ -1,12 +1,3 @@
-/* fonts */
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('Roboto.eot?#iefix') format('embedded-opentype'),
-       url('Roboto.woff') format('woff'),
-       url('Roboto.ttf') format('truetype');
-}
-
 *, *::before, *::after {
   box-sizing: inherit;
 }
