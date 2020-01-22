@@ -46,18 +46,9 @@
   transform-style: flat;
 }
 .noUi-connect {
-  /* top: 47%; */
   height: 100%;
   width: 100%;
 }
-
-/* .noUi-connect::before {
-  content: "";
-  position: absolute;
-  top: 50px;
-  z-index: 2;
-  background-color: #d7dcde;
-} */
 
 .noUi-origin {
   height: 10%;
