@@ -11,7 +11,7 @@ const CART = "cart";
 (function() {
 
 
-  console.log(items.map(({title}) => title));
+  console.log(window.itemsCard.map(({title}) => title));
 
   // sort by type, price, title
   // let sortedItems = [...items].sort(({ title: a}, {title: b}) => a.localeCompare(b));
@@ -32,7 +32,7 @@ const CART = "cart";
   //   return true;
   // });
 
-  let filteredItems = items.filter((item) => {
+  let filteredItems = window.itemsCard.filter((item) => {
     for (let req of requiredFeatures) {
       if (!item.features.includes(req)) {
         return false;

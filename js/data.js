@@ -1,7 +1,7 @@
 "use strict";
 
 (function(){
-  let items = [
+  window.itemsCard = [
     {
       title: "sedona",
       description: "Информационный сайт для туристов",
