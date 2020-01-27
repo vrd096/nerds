@@ -1,45 +1,15 @@
 "use strict";
 
-const ADAPTIVE_TYPE = "adaptive";
+const ADAPTIVE_TYPE = ["adaptive", "flex", "fixed"];
 const SLIDER = "slider";
+const BENEFITS = "benefits";
 const NEWS = "news";
-const BENEFITS = "BENEFITS";
+const GALLERY = "gallery";
+const CART = "cart";
+
 
 (function() {
-  let items = [
-    {
-      title: "B",
-      description: "ЧТо-то",
-      price: 2,
-      picture: "aplus.jpg",
-      type: ADAPTIVE_TYPE,
-      features: [NEWS],
 
-      addFeature(feature) {
-        this.features.push(feature);
-      },
-
-      get hasBenefit() {
-        return this.features.includes(BENEFITS);
-      }
-    },
-    {
-      title: "Cllkj",
-      description: "ЧТо-то",
-      price: 1,
-      picture: "aplus.jpg",
-      type: ADAPTIVE_TYPE,
-      features: [NEWS]
-    },
-    {
-      title: "A",
-      description: "ЧТо-то",
-      price: 3,
-      picture: "aplus.jpg",
-      type: ADAPTIVE_TYPE,
-      features: [SLIDER, NEWS]
-    }
-  ];
 
   console.log(items.map(({title}) => title));
 
