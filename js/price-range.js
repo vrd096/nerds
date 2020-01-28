@@ -43,11 +43,11 @@ sliderItemRight.addEventListener('change', function () {
   slider.noUiSlider.set([null, this.value]);
 });
 
-  const sliderButton = document.querySelector(".slider-btn-js");
+  // const sliderButton = document.querySelector(".slider-btn-js");
 
-  sliderButton.addEventListener("click", function(){
-    let sliderCoords = slider.noUiSlider.get();
-    console.log(sliderCoords[0]);
-  });
+  // sliderButton.addEventListener("click", function(){
+  //   let sliderCoords = slider.noUiSlider.get();
+  //   console.log(sliderCoords[0]);
+  // });
 
 }());
