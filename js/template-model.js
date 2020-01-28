@@ -7,11 +7,43 @@ const NEWS = "news";
 const GALLERY = "gallery";
 const CART = "cart";
 
-
 (function() {
+  let filterButton = document.querySelector(".catalog__button-filter");
+  let filterForm = document.querySelector(".catalog__filter-form");
 
+  let getRangePrice = function getRangePrice(start, final) {
+    let startPrice = document.querySelector("#slider-item-left");
+    let finalPrice = document.querySelector("#slider-item-right");
+    start = startPrice.value;
+    final = finalPrice.value;
+    let price = [];
+    price.push(start, final);
+    // console.log(start, final);
+    return price;
+  }
 
-  console.log(window.itemsCard.map(({title}) => title));
+  function getGrid() {
+    let selectRadio = document.querySelectorAll(".catalog__filter-grid-radio:checked");
+    // console.log(selectRadio);
+  }
+
+  function getFeatures() {
+    let selectCheckbox = document.querySelectorAll(".catalog__filter-features-checkbox:checked");
+    // console.log(selectCheckbox);
+  }
+
+  filterButton.addEventListener("click", function() {
+    console.log(getRangePrice());
+    // getRangePrice();
+    getGrid();
+    getFeatures();
+  });
+
+  filterForm.addEventListener("submit", function(evt) {
+    evt.preventDefault();
+  });
+
+  console.log(window.itemsCard.map(({ title }) => title));
 
   // sort by type, price, title
   // let sortedItems = [...items].sort(({ title: a}, {title: b}) => a.localeCompare(b));
@@ -32,7 +64,7 @@ const CART = "cart";
   //   return true;
   // });
 
-  let filteredItems = window.itemsCard.filter((item) => {
+  let filteredItems = window.itemsCard.filter(item => {
     for (let req of requiredFeatures) {
       if (!item.features.includes(req)) {
         return false;
@@ -44,12 +76,11 @@ const CART = "cart";
 
   let item1 = items[0];
 
-  console.log(item1.hasBenefit)
+  console.log(item1.hasBenefit);
   item1.addFeature(BENEFITS);
-  console.log(item1.hasBenefit)
+  console.log(item1.hasBenefit);
 
-  console.log(filteredItems.map(({title}) => title));
-
+  console.log(filteredItems.map(({ title }) => title));
 
   let template = `
   <li class="catalog__templates-item">
@@ -67,7 +98,7 @@ const CART = "cart";
       <button class="catalog__template-price-button button" type="button">9 900 Руб.</button>
     </div>
   </li>
-  `
+  `;
 
   console.log(template);
 })();
