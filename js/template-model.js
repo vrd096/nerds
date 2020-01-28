@@ -10,6 +10,8 @@
 (function() {
   let filterButton = document.querySelector(".catalog__button-filter");
   let filterForm = document.querySelector(".catalog__filter-form");
+  let items = window.itemsCard;
+  let requiredFeatures = [];
 
   function getRangePrice(start, final) {
     let startPrice = document.querySelector("#slider-item-left");
@@ -33,14 +35,37 @@
     let selectCheckbox = document.querySelectorAll(
       ".catalog__filter-features-checkbox:checked"
     );
-    // console.log(selectCheckbox);
+    // console.log(selectCheckbox[0].id);
+    requiredFeatures = [];
+     selectCheckbox.forEach(item => {
+       let itemId = item.id;
+       let strId = itemId.split("-", [2]);
+
+       requiredFeatures.push(strId[1]);
+
+    });
+    console.log(requiredFeatures);
   }
 
+  let filteredItems = items.filter((item) => {
+
+    for (let req of requiredFeatures) {
+      if (!item.features.includes(req)) {
+        return false;
+      }
+    }
+
+    return true;
+  });
+
   filterButton.addEventListener("click", function() {
-    console.log(getRangePrice());
+    // console.log(getRangePrice());
     // getRangePrice();
     getGrid();
     getFeatures();
+    filteredItems;
+    console.log(filteredItems.map(({ title }) => title));
+
   });
 
   filterForm.addEventListener("submit", function(evt) {
@@ -54,23 +79,23 @@
   // let sortedItems = [...items].sort((itemA, itemB) => itemA.title.localeCompare(itemB.title));
   // let sortedItems = [...items].sort((itemA, itemB) => itemA.price - itemB.price);
 
-  let requiredFeatures = ["news"];
-  let items = window.itemsCard;
+  // let requiredFeatures = ["slider"];
+  // let items = window.itemsCard;
 
   // let filteredItems = items.filter(item =>
   //   requiredFeatures.every(required => item.features.includes(required))
   // );
   // console.log(filteredItems.map(({ title }) => title));
-  let filteredItems = items.filter((item) => {
-    for (let req of requiredFeatures) {
-      if (!item.features.includes(req)) {
-        return false;
-      }
-    }
+  // let filteredItems = items.filter((item) => {
+  //   for (let req of requiredFeatures) {
+  //     if (!item.features.includes(req)) {
+  //       return false;
+  //     }
+  //   }
 
-    return true;
-  });
-console.log(filteredItems.map(({ title }) => title));
+  //   return true;
+  // });
+// console.log(filteredItems.map(({ title }) => title));
   // let filteredItems = window.itemsCard.filter(item => {
   //   for (let req of requiredFeatures) {
   //     if (!item.features.includes(req)) {
