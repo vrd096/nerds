@@ -12,6 +12,8 @@
   let filterForm = document.querySelector(".catalog__filter-form");
   let items = window.itemsCard;
   let requiredFeatures = [];
+  let requiredGrid = [];
+  let filterGrids = [];
 
   function getRangePrice(start, final) {
     let startPrice = document.querySelector("#slider-item-left");
@@ -28,7 +30,14 @@
     let selectRadio = document.querySelectorAll(
       ".catalog__filter-grid-radio:checked"
     );
-    // console.log(selectRadio);
+    requiredGrid = [];
+    selectRadio.forEach(item => {
+      let itemId = item.id;
+      let strId = itemId.split("-", [2]);
+
+      requiredGrid.push(strId[1]);
+    });
+    console.log(requiredGrid);
   }
 
   function getFeatures() {
@@ -37,35 +46,48 @@
     );
     // console.log(selectCheckbox[0].id);
     requiredFeatures = [];
-     selectCheckbox.forEach(item => {
-       let itemId = item.id;
-       let strId = itemId.split("-", [2]);
+    selectCheckbox.forEach(item => {
+      let itemId = item.id;
+      let strId = itemId.split("-", [2]);
 
-       requiredFeatures.push(strId[1]);
-
+      requiredFeatures.push(strId[1]);
     });
     console.log(requiredFeatures);
   }
 
-  let filteredItems = items.filter((item) => {
-
-    for (let req of requiredFeatures) {
-      if (!item.features.includes(req)) {
-        return false;
+  function filterGrid() {
+    let filteredItems = items.filter(item => {
+      for (let req of requiredGrid) {
+        if (!item.type.includes(req)) {
+          return false;
+        }
       }
-    }
 
-    return true;
-  });
+      return true;
+    });
+    filterGrids = filteredItems;
+    // console.log(filteredItems.map(({ title }) => title));
+  }
+
+  function filterFeatures() {
+    let filteredItems = filterGrids.filter(item => {
+      for (let req of requiredFeatures) {
+        if (!item.features.includes(req)) {
+          return false;
+        }
+      }
+
+      return true;
+    });
+    console.log(filteredItems.map(({ title }) => title));
+  }
 
   filterButton.addEventListener("click", function() {
-    // console.log(getRangePrice());
-    // getRangePrice();
+    getRangePrice();
     getGrid();
     getFeatures();
-    filteredItems;
-    console.log(filteredItems.map(({ title }) => title));
-
+    filterGrid();
+    filterFeatures();
   });
 
   filterForm.addEventListener("submit", function(evt) {
@@ -95,7 +117,7 @@
 
   //   return true;
   // });
-// console.log(filteredItems.map(({ title }) => title));
+  // console.log(filteredItems.map(({ title }) => title));
   // let filteredItems = window.itemsCard.filter(item => {
   //   for (let req of requiredFeatures) {
   //     if (!item.features.includes(req)) {
@@ -111,8 +133,6 @@
   // console.log(item1.hasBenefit);
   // item1.addFeature(BENEFITS);
   // console.log(item1.hasBenefit);
-
-
 
   // let template = `
   // <li class="catalog__templates-item">
