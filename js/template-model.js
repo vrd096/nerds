@@ -30,7 +30,9 @@
     let selectRadio = document.querySelectorAll(
       ".catalog__filter-grid-radio:checked"
     );
+    let filteredItems = [];
     requiredGrid = [];
+
     selectRadio.forEach(item => {
       let itemId = item.id;
       let strId = itemId.split("-", [2]);
@@ -38,12 +40,39 @@
       requiredGrid.push(strId[1]);
     });
     console.log(requiredGrid);
+    if (requiredGrid == "") {
+      // requiredGrid = items;
+      console.log("не выбрана радио кнопка")
+      filterGrids = items;
+    } else {
+      filteredItems = items.filter(item =>
+        requiredGrid.some(required => item.type.includes(required))
+      );
+      filterGrids = filteredItems;
+      console.log("выбрана радио кнопка")
+    }
+
   }
+
+  // function filterGrid() {
+  //   let filteredItems = items.filter(item => {
+  //     for (let req of requiredGrid) {
+  //       if (!item.type.includes(req)) {
+  //         return false;
+  //       }
+  //     }
+
+  //     return true;
+  //   });
+  //   filterGrids = filteredItems;
+  //   // console.log(filteredItems.map(({ title }) => title));
+  // }
 
   function getFeatures() {
     let selectCheckbox = document.querySelectorAll(
       ".catalog__filter-features-checkbox:checked"
     );
+    let filteredItems = [];
     // console.log(selectCheckbox[0].id);
     requiredFeatures = [];
     selectCheckbox.forEach(item => {
@@ -52,40 +81,53 @@
 
       requiredFeatures.push(strId[1]);
     });
+    if (requiredFeatures == "") {
+      // console.log("ничего не выбрано");
+      filteredItems = filterGrids.filter(item =>
+        requiredFeatures.every(required => item.features.includes(required))
+      );
+    } else {
+      filteredItems = filterGrids.filter(item =>
+        requiredFeatures.some(required => item.features.includes(required))
+      );
+
+    }
     console.log(requiredFeatures);
+    console.log(filteredItems.map(({ title }) => title));
+
   }
 
-  function filterGrid() {
-    let filteredItems = items.filter(item => {
-      for (let req of requiredGrid) {
-        if (!item.type.includes(req)) {
-          return false;
-        }
-      }
+  // function filterGrid() {
+  //   let filteredItems = items.filter(item => {
+  //     for (let req of requiredGrid) {
+  //       if (!item.type.includes(req)) {
+  //         return false;
+  //       }
+  //     }
 
-      return true;
-    });
-    filterGrids = filteredItems;
-    // console.log(filteredItems.map(({ title }) => title));
-  }
+  //     return true;
+  //   });
+  //   filterGrids = filteredItems;
+  //   // console.log(filteredItems.map(({ title }) => title));
+  // }
 
   // let filteredItems = items.filter(item =>
   //   requiredFeatures.every(required => item.features.includes(required))
   // );
 
-  function filterFeatures() {
-    let filteredItems = filterGrids.filter(item =>
-      requiredFeatures.some(required => item.features.includes(required))
-    );
-    console.log(filteredItems.map(({ title }) => title));
-  }
+  // function filterFeatures() {
+  //   let filteredItems = filterGrids.filter(item =>
+  //     requiredFeatures.some(required => item.features.includes(required))
+  //   );
+  //   // console.log(filteredItems.map(({ title }) => title));
+  // }
 
   filterButton.addEventListener("click", function() {
     getRangePrice();
     getGrid();
     getFeatures();
-    filterGrid();
-    filterFeatures();
+    // filterGrid();
+    // filterFeatures();
   });
 
   filterForm.addEventListener("submit", function(evt) {
