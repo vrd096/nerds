@@ -69,16 +69,14 @@
     // console.log(filteredItems.map(({ title }) => title));
   }
 
-  function filterFeatures() {
-    let filteredItems = filterGrids.filter(item => {
-      for (let req of requiredFeatures) {
-        if (!item.features.includes(req)) {
-          return false;
-        }
-      }
+  // let filteredItems = items.filter(item =>
+  //   requiredFeatures.every(required => item.features.includes(required))
+  // );
 
-      return true;
-    });
+  function filterFeatures() {
+    let filteredItems = filterGrids.filter(item =>
+      requiredFeatures.some(required => item.features.includes(required))
+    );
     console.log(filteredItems.map(({ title }) => title));
   }
 
