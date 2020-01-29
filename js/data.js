@@ -48,7 +48,7 @@
       price: 5500,
       picture: "aplus.jpg",
       type: "flex",
-      features: ["slider", "cart"]
+      features: ["gallery", "cart"]
     },
     {
       title: "kvast",

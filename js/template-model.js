@@ -39,7 +39,7 @@
 
       requiredGrid.push(strId[1]);
     });
-    console.log(requiredGrid);
+    // console.log(requiredGrid);
     if (requiredGrid == "") {
       // requiredGrid = items;
       console.log("не выбрана радио кнопка")
@@ -92,7 +92,7 @@
       );
 
     }
-    console.log(requiredFeatures);
+    // console.log(requiredFeatures);
     console.log(filteredItems.map(({ title }) => title));
 
   }
