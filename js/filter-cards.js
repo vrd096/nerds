@@ -1,23 +1,32 @@
 "use strict";
 
-
 (function() {
   let filterButton = document.querySelector(".catalog__button-filter");
   let filterForm = document.querySelector(".catalog__filter-form");
   let items = window.itemsCard;
-  let requiredFeatures = [];
-  let requiredGrid = [];
+  let filterPrice = [];
   let filterGrids = [];
 
   function getRangePrice(start, final) {
     let startPrice = document.querySelector("#slider-item-left");
     let finalPrice = document.querySelector("#slider-item-right");
+
     start = startPrice.value;
     final = finalPrice.value;
+
     let price = [];
+
     price.push(start, final);
-    console.log(price);
-    // return price;
+    let requaredPrice = items.filter(item => {
+
+      if (item.price > start && item.price < final ) {
+        return true;
+      }
+
+    });
+
+    filterPrice = requaredPrice;
+    // console.log(filterPrice);
   }
 
   function filterGrid() {
@@ -25,7 +34,7 @@
       ".catalog__filter-grid-radio:checked"
     );
     let filteredItems = [];
-    requiredGrid = [];
+    let requiredGrid = [];
 
     selectRadio.forEach(item => {
       let itemId = item.id;
@@ -35,17 +44,15 @@
     });
 
     if (requiredGrid == "") {
-
-      console.log("не выбрана радио кнопка")
-      filterGrids = items;
+      console.log("не выбрана радио кнопка");
+      filterGrids = filterPrice;
     } else {
-      filteredItems = items.filter(item =>
+      filteredItems = filterPrice.filter(item =>
         requiredGrid.some(required => item.type.includes(required))
       );
       filterGrids = filteredItems;
-      console.log("выбрана радио кнопка")
+      // console.log("выбрана радио кнопка");
     }
-
   }
 
   function filterFeatures() {
@@ -53,16 +60,16 @@
       ".catalog__filter-features-checkbox:checked"
     );
     let filteredItems = [];
+    let requiredFeatures = [];
 
-    requiredFeatures = [];
     selectCheckbox.forEach(item => {
       let itemId = item.id;
       let strId = itemId.split("-", [2]);
 
       requiredFeatures.push(strId[1]);
     });
-    if (requiredFeatures == "") {
 
+    if (requiredFeatures == "") {
       filteredItems = filterGrids.filter(item =>
         requiredFeatures.every(required => item.features.includes(required))
       );
@@ -70,13 +77,10 @@
       filteredItems = filterGrids.filter(item =>
         requiredFeatures.some(required => item.features.includes(required))
       );
-
     }
 
     console.log(filteredItems.map(item => item));
-
   }
-
 
   filterButton.addEventListener("click", function() {
     getRangePrice();
