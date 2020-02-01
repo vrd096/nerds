@@ -1,11 +1,5 @@
 "use strict";
 
-// const ADAPTIVE_TYPE = ["adaptive", "flex", "fixed"];
-// const SLIDER = "slider";
-// const BENEFITS = "benefits";
-// const NEWS = "news";
-// const GALLERY = "gallery";
-// const CART = "cart";
 
 (function() {
   let filterButton = document.querySelector(".catalog__button-filter");
@@ -22,11 +16,11 @@
     final = finalPrice.value;
     let price = [];
     price.push(start, final);
-    // console.log(start, final);
-    return price;
+    console.log(price);
+    // return price;
   }
 
-  function getGrid() {
+  function filterGrid() {
     let selectRadio = document.querySelectorAll(
       ".catalog__filter-grid-radio:checked"
     );
@@ -39,9 +33,9 @@
 
       requiredGrid.push(strId[1]);
     });
-    // console.log(requiredGrid);
+
     if (requiredGrid == "") {
-      // requiredGrid = items;
+
       console.log("не выбрана радио кнопка")
       filterGrids = items;
     } else {
@@ -54,26 +48,12 @@
 
   }
 
-  // function filterGrid() {
-  //   let filteredItems = items.filter(item => {
-  //     for (let req of requiredGrid) {
-  //       if (!item.type.includes(req)) {
-  //         return false;
-  //       }
-  //     }
-
-  //     return true;
-  //   });
-  //   filterGrids = filteredItems;
-  //   // console.log(filteredItems.map(({ title }) => title));
-  // }
-
-  function getFeatures() {
+  function filterFeatures() {
     let selectCheckbox = document.querySelectorAll(
       ".catalog__filter-features-checkbox:checked"
     );
     let filteredItems = [];
-    // console.log(selectCheckbox[0].id);
+
     requiredFeatures = [];
     selectCheckbox.forEach(item => {
       let itemId = item.id;
@@ -82,7 +62,7 @@
       requiredFeatures.push(strId[1]);
     });
     if (requiredFeatures == "") {
-      // console.log("ничего не выбрано");
+
       filteredItems = filterGrids.filter(item =>
         requiredFeatures.every(required => item.features.includes(required))
       );
@@ -92,40 +72,16 @@
       );
 
     }
-    // console.log(requiredFeatures);
-    console.log(filteredItems.map(({ title }) => title));
+
+    console.log(filteredItems.map(item => item));
 
   }
 
-  // function filterGrid() {
-  //   let filteredItems = items.filter(item => {
-  //     for (let req of requiredGrid) {
-  //       if (!item.type.includes(req)) {
-  //         return false;
-  //       }
-  //     }
-
-  //     return true;
-  //   });
-  //   filterGrids = filteredItems;
-  //   // console.log(filteredItems.map(({ title }) => title));
-  // }
-
-  // let filteredItems = items.filter(item =>
-  //   requiredFeatures.every(required => item.features.includes(required))
-  // );
-
-  // function filterFeatures() {
-  //   let filteredItems = filterGrids.filter(item =>
-  //     requiredFeatures.some(required => item.features.includes(required))
-  //   );
-  //   // console.log(filteredItems.map(({ title }) => title));
-  // }
 
   filterButton.addEventListener("click", function() {
     getRangePrice();
-    getGrid();
-    getFeatures();
+    filterGrid();
+    filterFeatures();
     // filterGrid();
     // filterFeatures();
   });

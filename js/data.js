@@ -5,7 +5,7 @@
     {
       title: "sedona",
       description: "Информационный сайт для туристов",
-      price: 9900,
+      price: 19900,
       picture: "sedona.jpg",
       type: "flex",
       features: ["news", "slider", "benefits"]
@@ -29,7 +29,7 @@
     {
       title: "barbershop",
       description: "Сайт салоны красоты. Для мужчин, да.",
-      price: 7700,
+      price: 17700,
       picture: "barbershop.jpg",
       type: "fixed",
       features: ["slider", "news"]
@@ -53,7 +53,7 @@
     {
       title: "kvast",
       description: "Промо-сайт производителя крафтового кваса",
-      price: 4400,
+      price: 14400,
       picture: "kvast.jpg",
       type: "fixed",
       features: ["news", "gallery"]
