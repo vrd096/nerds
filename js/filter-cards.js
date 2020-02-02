@@ -4,8 +4,9 @@
   let filterButton = document.querySelector(".catalog__button-filter");
   let filterForm = document.querySelector(".catalog__filter-form");
   let items = window.itemsCard;
-  let filterPrice = [];
-  let filterGrids = [];
+  let cardsAfterPrice = [];
+  let cardsAfterGrid = [];
+  window.cardsAfterFilter = [];
 
   function getRangePrice() {
     let startPrice = document.querySelector("#slider-item-left");
@@ -19,7 +20,7 @@
       }
     });
 
-    filterPrice = requaredPrice;
+    cardsAfterPrice = requaredPrice;
   }
 
   function filterGrid() {
@@ -38,12 +39,12 @@
 
     if (requiredGrid == "") {
       console.log("не выбрана радио кнопка");
-      filterGrids = filterPrice;
+      cardsAfterGrid = cardsAfterPrice;
     } else {
-      filteredItems = filterPrice.filter(item =>
+      filteredItems = cardsAfterPrice.filter(item =>
         requiredGrid.some(required => item.type.includes(required))
       );
-      filterGrids = filteredItems;
+      cardsAfterGrid = filteredItems;
       // console.log("выбрана радио кнопка");
     }
   }
@@ -63,16 +64,17 @@
     });
 
     if (requiredFeatures == "") {
-      filteredItems = filterGrids.filter(item =>
+      filteredItems = cardsAfterGrid.filter(item =>
         requiredFeatures.every(required => item.features.includes(required))
       );
     } else {
-      filteredItems = filterGrids.filter(item =>
+      filteredItems = cardsAfterGrid.filter(item =>
         requiredFeatures.some(required => item.features.includes(required))
       );
     }
 
-    console.log(filteredItems.map(item => item));
+    window.cardsAfterFilter = filteredItems.map(item => item);
+    // console.log(window.cardsAfterFilter);
   }
 
   filterButton.addEventListener("click", function() {
@@ -89,9 +91,9 @@
 
   // sort by type, price, title
   // let sortedItems = [...items].sort(({ title: a}, {title: b}) => a.localeCompare(b));
-  // let sortedItems = [...items].sort((itemA, itemB) => itemA.title.localeCompare(itemB.title));
-  // let sortedItems = [...items].sort((itemA, itemB) => itemA.price - itemB.price);
-
+  // // let sortedItems = [...items].sort((itemA, itemB) => itemA.title.localeCompare(itemB.title));
+  // // let sortedItems = [...items].sort((itemA, itemB) => itemA.price - itemB.price);
+  // console.log(sortedItems);
   // let requiredFeatures = ["slider"];
   // let items = window.itemsCard;
 
@@ -142,6 +144,7 @@
   //   </div>
   // </li>
   // `;
-
+  window.cardsAfterFilter = items;
+  // console.log(window.cardsAfterFilter);
   // console.log(template);
 })();

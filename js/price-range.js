@@ -4,7 +4,7 @@
   let slider = document.getElementById('r-slider');
 
   noUiSlider.create(slider, {
-      start: [10, 15000],
+      start: [10, 20000],
       connect: true,
       step: 10,
       range: {
