@@ -7,26 +7,19 @@
   let filterPrice = [];
   let filterGrids = [];
 
-  function getRangePrice(start, final) {
+  function getRangePrice() {
     let startPrice = document.querySelector("#slider-item-left");
     let finalPrice = document.querySelector("#slider-item-right");
+    let start = startPrice.value;
+    let final = finalPrice.value;
 
-    start = startPrice.value;
-    final = finalPrice.value;
-
-    let price = [];
-
-    price.push(start, final);
     let requaredPrice = items.filter(item => {
-
-      if (item.price > start && item.price < final ) {
+      if (item.price > start && item.price < final) {
         return true;
       }
-
     });
 
     filterPrice = requaredPrice;
-    // console.log(filterPrice);
   }
 
   function filterGrid() {
@@ -86,8 +79,6 @@
     getRangePrice();
     filterGrid();
     filterFeatures();
-    // filterGrid();
-    // filterFeatures();
   });
 
   filterForm.addEventListener("submit", function(evt) {
