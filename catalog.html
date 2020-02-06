@@ -194,29 +194,30 @@
                   Сортировать:
                 </h2>
                 <div class="catalog__sort-inner">
-                  <ul class="catalog__sort-list">
+                  <ul class="catalog__sort-list js-sort-criteria">
                     <li class="catalog__sort-item">
                       <a
-                        class="catalog__sort-link catalog__sort-link--current sort-price-js"
+                        class="catalog__sort-link catalog__sort-link--current "
                         href="#"
+                        data-criteria="price"
                         >По цене</a
                       >
                     </li>
                     <li class="catalog__sort-item">
-                      <a class="catalog__sort-link sort-type-js" href="#">По типу</a>
+                      <a class="catalog__sort-link " href="#" data-criteria="type">По типу</a>
                     </li>
                     <li class="catalog__sort-item">
-                      <a class="catalog__sort-link sort-name-js" href="#">По названию</a>
+                      <a class="catalog__sort-link " href="#" data-criteria="title">По названию</a>
                     </li>
                   </ul>
-                  <div class="catalog__sort-arrows">
+                  <div class="catalog__sort-arrows js-sort-direction">
                     <a class=" catalog__sort-link--arrow" href="#">
                       Стрелка вверх
-                      <span class="catalog__sort-arrow-up"></span>
+                      <span class="catalog__sort-arrow-up " data-direction="down"></span>
                     </a>
                     <a class=" catalog__sort-link--arrow" href="#">
                       Стрелка вниз
-                      <span class="catalog__sort-arrow-down"></span>
+                      <span class="catalog__sort-arrow-down " data-direction="up"></span>
                     </a>
                   </div>
                 </div>
