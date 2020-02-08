@@ -1,8 +1,6 @@
 "use strict";
 
 (function() {
-  let list = window.cardsAfterFilter;
-  let currentList = list;
   const defaultSortCriteria = "price";
   const defaultSortDirection = "down"; // up or down
 
@@ -23,7 +21,6 @@
         return itemA[key].localeCompare(itemB[key]);
       });
     }
-
     return items;
   }
 
@@ -39,11 +36,12 @@
         return itemA[key] - itemB[key];
       });
     }
-
     return items;
   }
 
-  function sync() {
+  window.syncSort = function syncSort() {
+    let list = window.cardsAfterFilter;
+    let currentList = list;
     const sortType = sortCriteria === "price" ? sortByNumber : sortByString;
 
     currentList = sortType({
@@ -53,17 +51,22 @@
     });
     console.log(currentList);
     // render(currentList);
-  }
+  };
 
   function handleCriteriaClick(evt) {
     evt.preventDefault();
     sortCriteria = evt.target.dataset.criteria;
-    sync();
+    if (sortCriteria !== undefined) {
+      syncSort();
+    }
   }
+
   function handleDirectionClick(evt) {
     evt.preventDefault();
     sortDirection = evt.target.dataset.direction;
-    sync();
+    if (sortDirection !== undefined) {
+      syncSort();
+    }
   }
 
   document
