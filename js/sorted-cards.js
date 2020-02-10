@@ -6,6 +6,7 @@
 
   let sortCriteria = defaultSortCriteria; // name or price
   let sortDirection = defaultSortDirection;
+  window.cardsAfterSorted = [];
 
   function render() {}
 
@@ -49,8 +50,9 @@
       key: sortCriteria,
       direction: sortDirection
     });
-    console.log(currentList);
     // render(currentList);
+    window.cardsAfterSorted = currentList;
+    console.log(window.cardsAfterSorted);
   };
 
   function handleCriteriaClick(evt) {
