@@ -8,8 +8,6 @@
   let sortDirection = defaultSortDirection;
   window.cardsAfterSorted = [];
 
-  function render() {}
-
   function sortByString({ items, key, direction }) {
     if (direction === "down") {
       return [...items].sort((itemA, itemB) => {
@@ -50,9 +48,8 @@
       key: sortCriteria,
       direction: sortDirection
     });
-    // render(currentList);
     window.cardsAfterSorted = currentList;
-    console.log(window.cardsAfterSorted);
+    renderItems(window.cardsAfterSorted, window.createCardElement, ".js-template-list");
   };
 
   function handleCriteriaClick(evt) {

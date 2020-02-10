@@ -13,6 +13,4 @@
     });
     document.querySelector(targetSelector).appendChild(fragment);
   };
-
-  // renderItems(window.cardsAfterSorted, window.createCardElement, ".js-template-list");
 })();

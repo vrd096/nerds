@@ -72,7 +72,6 @@
     }
 
     window.cardsAfterFilter = filteredItems.map(item => item);
-    // console.log(window.cardsAfterFilter);
   }
 
   window.syncFilters = function syncFilters() {
