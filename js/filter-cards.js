@@ -79,7 +79,6 @@
     filterGrid();
     filterFeatures();
     window.syncSort();
-    renderItems(window.cardsAfterSorted, window.createCardElement, ".js-template-list");
   };
 
   filterButton.addEventListener("click", window.syncFilters);

@@ -2,9 +2,9 @@
 
 (function() {
   const defaultSortCriteria = "price";
-  const defaultSortDirection = "down"; // up or down
+  const defaultSortDirection = "down";
 
-  let sortCriteria = defaultSortCriteria; // name or price
+  let sortCriteria = defaultSortCriteria;
   let sortDirection = defaultSortDirection;
   window.cardsAfterSorted = [];
 
