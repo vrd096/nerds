@@ -18,7 +18,6 @@
   let form = document.querySelector(".modal-send__form");
 
   form.addEventListener("submit", function(evt) {
-
     evt.preventDefault();
   });
 
