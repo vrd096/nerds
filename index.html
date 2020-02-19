@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Студия дизайна Nerds</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -14,6 +15,9 @@
           <a href="/" class="nav__logo">
             <img src="img/logo.svg" alt="логотип Nerds" />
           </a>
+          <button class="nav__toggle" type="button">
+            <span class="nav__toggle-burger">Открыть меню</span>
+          </button>
           <ul class="nav__list">
             <li class="nav__item">
               <a href="/about" class="nav__link is-active">Студия</a>
@@ -28,14 +32,16 @@
               <a href="/contacts" class="nav__link">Контакты</a>
             </li>
           </ul>
-          <a href="/cart" class="nav__link nav__link-cart">
-            <img
-              src="img/cart.svg"
-              alt="Корзина товаров"
-              class="nav__link-icon"
-            />
-            Корзина
-          </a>
+          <div class="nav__cart">
+            <a href="/cart" class="nav__link nav__link-cart">
+              <img
+                src="img/cart.svg"
+                alt="Корзина товаров"
+                class="nav__link-icon"
+              />
+              Корзина
+            </a>
+          </div>
         </nav>
       </div>
     </header>
@@ -275,10 +281,10 @@
     <section class="modal-send visually-hidden">
       <h2 class="modal-send__title">Напишите нам</h2>
       <form
-      class="modal-send__form"
-      method="post"
-      enctype="multipart/form-data"
-      autocomplete="off"
+        class="modal-send__form"
+        method="post"
+        enctype="multipart/form-data"
+        autocomplete="off"
       >
         <div class="modal-send__inner">
           <label class="modal-send__labels modal-send__labels--margin-right">
@@ -335,7 +341,6 @@
 
     <script src="js/modal-form.js"></script>
     <script src="js/form.js"></script>
-
   </body>
   <script></script>
 </html>
