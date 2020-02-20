@@ -131,9 +131,18 @@ ul {
     background-color: #eeeeee;
   }
   .nav__list {
+    position: absolute;
+    display: block;
+    width: 280px;
+    z-index: 2;
+    display: block;
     margin-top: 50px;
+    background-color: #fff;
     text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
   }
+
   .nav__link {
     display: block;
     font-size: 28px;
@@ -141,7 +150,17 @@ ul {
     border-bottom: 2px solid #b4b9bb;
   }
   .nav__cart {
+    position: absolute;
+    z-index: 2;
+    top: 63.5%;
+    display: block;
+    width: 280px;
+    background-color: #eee;
     text-align: center;
+    opacity: 0;
+  }
+  .nav__menu--opended {
+    opacity: 1;
   }
   .nav__link-cart {
     border: none;
@@ -151,7 +170,7 @@ ul {
   }
   .nav__toggle {
     position: absolute;
-    top: 4%;
+    top: 5%;
     right: 5%;
     z-index: 2;
     display: block;
@@ -164,11 +183,12 @@ ul {
   }
   .nav__toggle-burger {
     position: absolute;
-    left: 22%;
+    left: 32%;
     width: 40px;
     height: 3px;
     background-color: #000;
     font-size: 0;
+    transition: rotate 2s;
   }
   .nav__toggle-burger::before, .nav__toggle-burger::after {
     content: "";
@@ -179,10 +199,21 @@ ul {
     background-color: #000;
   }
   .nav__toggle-burger::before {
-    top: -350%;
+    top: -470%;
   }
   .nav__toggle-burger::after {
-    top: 370%;
+    top: 450%;
+  }
+  .nav__toggle-burger--opened {
+    position: absolute;
+    left: 50%;
+    width: 0;
+  }
+  .nav__toggle-burger--opened::before {
+    transform: rotate(45deg) translateY(650%);
+  }
+  .nav__toggle-burger--opened::after {
+    transform: rotate(-45deg) translateY(-650%);
   }
 }
 
