@@ -139,6 +139,7 @@ ul {
   .nav__list {
     position: absolute;
     top: 15%;
+    right: 5%;
     display: block;
     width: 90%;
     margin: 5% auto 0;
@@ -149,7 +150,6 @@ ul {
     opacity: 0;
     transition: opacity 0.3s;
   }
-
   .nav__link {
     display: block;
     font-size: 28px;
@@ -157,7 +157,6 @@ ul {
     border-bottom: 2px solid #b4b9bb;
   }
   .nav__cart {
-
     z-index: 2;
     display: block;
     background-color: #eee;
@@ -174,7 +173,6 @@ ul {
     margin-right: 10px;
   }
   .nav__toggle {
-
     z-index: 2;
     width: 70px;
     height: 50px;
@@ -204,10 +202,10 @@ ul {
   .nav__toggle-burger::after {
     top: 450%;
   }
-  .nav__toggle-burger--opened .nav__toggle-burger{
+  .nav__toggle-burger--opened .nav__toggle-burger {
     width: 0;
   }
-  .nav__toggle-burger--opened .nav__toggle-burger::before{
+  .nav__toggle-burger--opened .nav__toggle-burger::before {
     transform: rotate(45deg);
     top: 5%;
   }
@@ -218,11 +216,21 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .nav__toggle {
-
+  .nav__list {
+    top: 5%;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    background-color: #eee;
+  }
+  .nav__item {
+    background-color: #fff;
   }
   .nav__link {
-    border: none;
+    font-size: 24px;
+  }
+  .nav__cart {
+    background-color: #fff;
   }
 }
 
