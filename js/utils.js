@@ -9,6 +9,5 @@
     navMenu.classList.toggle("nav__menu--opended");
     navCart.classList.toggle("nav__menu--opended");
     handleBurger.classList.toggle("nav__toggle-burger--opened");
-
   });
-}());
+})();
