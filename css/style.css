@@ -140,7 +140,7 @@ ul {
     position: absolute;
     top: 15%;
     right: 5%;
-    display: block;
+    display: none;
     width: 90%;
     margin: 5% auto 0;
     z-index: 2;
@@ -148,7 +148,8 @@ ul {
     background-color: #fff;
     text-align: center;
     opacity: 0;
-    transition: opacity 0.3s;
+    transform: translateY(-200%);
+    transition: opacity 0.3s, transform 0.1s;
   }
   .nav__link {
     display: block;
@@ -158,12 +159,14 @@ ul {
   }
   .nav__cart {
     z-index: 2;
-    display: block;
+    display: none;
     background-color: #eee;
     text-align: center;
     opacity: 0;
   }
   .nav__menu--opended {
+    display: block;
+    transform: translateY(0);
     opacity: 1;
   }
   .nav__link-cart {
@@ -222,6 +225,11 @@ ul {
     width: 40%;
     height: 100vh;
     background-color: #eee;
+    transform: translateX(100%);
+    transition: opacity 0.3s, transform 0.1s;
+  }
+  .nav__menu--opended {
+    transform: translateX(0);
   }
   .nav__item {
     background-color: #fff;
@@ -246,15 +254,31 @@ ul {
     flex-wrap: wrap;
     align-items: center;
   }
+  .nav__logo {
+    flex-grow: 1;
+  }
+  .nav__toggle {
+    display: none;
+  }
   .nav__list {
+    position: static;
+    width: inherit;
     display: flex;
-    margin-right: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    opacity: 1;
+    transform: translateX(0);
+    height: inherit;
+    background-color: transparent;
   }
   .nav__item {
     margin: 0 24px;
+    background-color: transparent;
   }
   .nav__link {
     padding: 10px 0;
+    font-size: 16px;
     font-weight: 500;
     transition: all 0.3s;
   }
@@ -272,6 +296,12 @@ ul {
   }
   .nav__link-icon {
     margin-right: 26px;
+  }
+  .nav__cart {
+    display: block;
+    margin-left: 50px;
+    opacity: 1;
+    background-color: transparent;
   }
 }
 

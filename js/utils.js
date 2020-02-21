@@ -8,8 +8,6 @@
   handleBurger.addEventListener("click", function() {
     navMenu.classList.toggle("nav__menu--opended");
     navCart.classList.toggle("nav__menu--opended");
-    navMenu.classList.toggle("visually-hidden");
-    navCart.classList.toggle("visually-hidden");
     handleBurger.classList.toggle("nav__toggle-burger--opened");
 
   });
